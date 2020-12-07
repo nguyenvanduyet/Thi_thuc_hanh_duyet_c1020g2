@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xóa phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr, a) {
+        arr = [5, 7, 9, 11, 13, 15, 17, 19, 68, 86];
+        a = parseFloat(prompt("nhập số nguyên: "));
+        let i = 0;
+        while (i < arr.length) {
+            if (arr[i]===a)
+                arr.splice(i, 1);
+
+            else i++;
+        }
+        document.write(arr);
+    }
+    tryRemoveFromArray();
+</script>
+</body>
+</html>

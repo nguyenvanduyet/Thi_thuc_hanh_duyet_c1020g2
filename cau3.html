@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết hàm Fibonacci</title>
+</head>
+<body>
+<script>
+    function isFibonacci(number) {
+        let number1 = 0;
+        let number2 = 1;
+        number = parseInt(prompt("nhập số nguyên"))
+        for (let i = 0; i < number; i++) {
+            let number3 = number1 + number2;
+            number1 = number2;
+            number2 = number3;
+            if (number3 === number) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    alert(isFibonacci());
+</script>
+</body>
+</html>

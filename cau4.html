@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>biểu diễn hình tròn</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    function Circle(x, y, r, color) {
+        this.X = x;
+        this.Y = y;
+        this.radius = r;
+        this.Color = color;
+        this.render = function () {
+            let canvas = document.getElementById("canvas").getContext("2d");
+            canvas.arc(this.X, this.Y, this.radius, 0, 2 * Math.PI);
+            canvas.strokeStyle = this.Color;
+            canvas.stroke();
+        }
+    }
+    let circle = new Circle(10, 10, 100, "#000000");
+    circle.render();
+</script>
+</body>
+</html>
